@@ -7,8 +7,7 @@
 
 - 鞏固自己在前端與後端開發的知識，特別是：
   - React 前端開發
-  - Django 後端開發
-  - LangChain 人工智慧應用開發
+  - Nodejs 後端開發
 - 提升應對實務挑戰的能力，並透過貼近實務的專案經驗了解現實中常遇到的問題。
 - 針對 NoSQL、GitHub Actions 和 Docker 的補強
 
