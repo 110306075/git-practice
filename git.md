@@ -1,8 +1,5 @@
 # 說明 blob, tree, commit, branch, head 分別是什麼
 
----
-
-# Git 中的五個關鍵概念
 
 ## 1. Blob (Binary Large Object)
 - **定義**：Blob 是 Git 中用來存儲文件內容的對象，代表文件的快照。它只存儲文件的內容，而不存儲文件名或目錄結構。每個 Blob 由文件內容的 SHA-1 哈希值標識。
