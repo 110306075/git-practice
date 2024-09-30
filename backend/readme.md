@@ -54,7 +54,7 @@ module.exports = app; // export module
 import express from 'express'; // import module
 export const app = express(); // export module
  ```
-比較:
+### 比較:
  
     1. 同步與非同步：
         CJS：模組是同步加載的，模組在 require() 語句執行時就會被加載
