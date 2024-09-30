@@ -56,19 +56,19 @@ export const app = express(); // export module
  ```
 ### 比較:
  
-    1. 同步與非同步：
+     - 同步與非同步：
         CJS：模組是同步加載的，模組在 require() 語句執行時就會被加載
         ESM：模組是非同步加載的，使用 import 會在需要時以非同步方式加載模組
         
-    2. 執行環境：
+     - 執行環境：
         CJS：原生支援於 Node.js 環境 
         ESM：原生支援於較新的瀏覽器以及 Node.js（從 v12 開始逐步支援）
         
-    3. 模組作用域：
+     - 模組作用域：
         CJS：模組的內容包裹在一個函數作用域中，變數只在模組內部有效。
         ESM：模組有自己的 module scope，所以 import 和 export 的變數只在模組範圍內有效
         
-    4. 檔案副檔名：
+     - 檔案副檔名：
         CJS：通常使用 .js。
         ESM：可以使用 .js 或 .mjs，在 Node.js 中，需明確指定副檔名為 .mjs 或在 package.json 中設置 "type": "module"
 
