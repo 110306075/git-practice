@@ -47,3 +47,23 @@ AWS (Amazon Web Services) 使用全球的 Region 和 Availability Zone (AZ) 來�
 ## 6.稅務優惠
 - **稅務考量**：部分國家或地區可能會對雲服務徵收稅費，選擇某些 Region 可能會影響你的總體費用。例如，AWS 在特定地區的稅收優惠政策可能會降低你的總成本
 
+
+## 測量、量化 latency 的 方法：
+
+### 1. 網路診斷工具
+- **Ping**：測量從本地端到 AWS Region 伺服器的 RTT ，像是如果是測試到東京的 latency ，可以用東京 region 內的一個 EC2 的 IP ，然後用 ping 多次測試，並分析回應時間。
+- **Traceroute**：顯示從本地端到 AWS Region 的路徑，並顯示每個節點的 latency，並找出 bottleneck 或 high latency 的區域，測試方法跟 ping 類似 （但用 traceroute 可能會因防火牆或路由器問題而有些節點會無法顯示）。
+
+### 2. AWS 內建工具
+- **AWS CloudWatch Synthetics**：利用 Canary 並設定 script來模擬使用者行為，如 call api 或 HTTP request 等等，然後再設定 Canary 的執行 interval 與 位置，來進行多次測試，然後就可以在 Synthetics 看到數據與報告。
+- **Connection Health Check**: 利用 amozon workplace 裡面的 connection health check 來觀察當前位置到全球各個不同的 region 的 RTT ，並會提供 speed rating 像是 acceptable slow 等等，讓使用者可以輕易獲取 latency 的數據
+  
+  參考資料：https://docs.aws.amazon.com/whitepapers/latest/best-practices-deploying-amazon-workspaces/how-to-check-latency-to-the-closest-aws-region.html
+
+
+
+
+
+
+
+
