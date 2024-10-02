@@ -10,8 +10,8 @@
 scripts 區塊用來 define 一些可以在 command line 中執行的 script 。例如，可以在 package.json 中的 scripts 區塊定義一個名為 start 的腳本，然後透過 npm run start 來執行它。
 
 ## 3.Port number 要怎麼以環境變數來設定？
-使用環境變數來設置 port，讓程式碼根據不同的配置切換port，而非寫死在程式碼中。
-有兩種方式可以達成用環境變數設定port
+使用環境變數來設置 port ，讓程式碼根據不同的配置切換 port ，而非寫死在程式碼中。
+有兩種方式可以達成用環境變數設定 port
  - 用 process.env 來讀取環境變數中的 port 值:
   ```
   const port = process.env.PORT ;
