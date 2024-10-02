@@ -8,7 +8,7 @@ AWS (Amazon Web Services) 使用全球的 Region 和 Availability Zone (AZ) 來�
   - 每個 Region 位於不同的地理位置，如美國東部（北弗吉尼亞），歐洲（愛爾蘭），亞太地區（東京）等等
   - 各 Region 彼此獨立，因此數據和應用程式不會在不同 Region 之間自動同步。
   - Region 是針對遵從法規、地理距離、延遲等問題而設計的。使用者可以根據法規要求或服務性能選擇適合的 Region
-  - 每個 Region 都包含多個 Availability Zone，確保高可用性
+  - 每個 Region 都包含多個 Availability Zone ，確保高可用性
 
 ## 2. AWS Availability Zone (AZ)
 - **定義**：Availability Zone 是一個或多個獨立的數據中心，位於同一 Region 內，但物理上彼此隔離，而且具有不同的電力、網路及冷卻等硬體設備
@@ -31,7 +31,7 @@ AWS (Amazon Web Services) 使用全球的 Region 和 Availability Zone (AZ) 來�
 - **本地法規**：選擇 Region 時需要考慮當地政府的法律、隱私政策以及對數據存儲位置的要求。如醫療、金融等高度監管行業中會遇到這類限制與規範
 
 ## 2. 延遲和性能
-- **地理距離**：應選擇靠近的主要客戶或業務所在地的 Region，這可以減少網路延遲，提高應用程式的性能。假如客戶主要在亞洲，選擇東京或新加坡 Region 會比美國的 Region 更加合適
+- **地理距離**：應選擇靠近的主要客戶或業務所在地的 Region ，這可以減少網路延遲，提高應用程式的性能。假如客戶主要在亞洲，選擇東京或新加坡 Region 會比美國的 Region 更加合適
 - **邊緣位置（Edge Location）**：如果應用依賴於 AWS 的內容傳遞網路（CDN，如 CloudFront），應確保邊緣節點也接近用戶所在地，進一步提高速度
 
 ## 3. 成本
