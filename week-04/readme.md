@@ -75,6 +75,7 @@ server {
 
 **已解決：**  
 使用 `chmod 400 ~/.ssh/D's-web-server-key.pem` 將金鑰檔案的權限設置為只有擁有者可讀取。然後就解決權限錯誤。
+
 **問題 2：**  
 當我使用 PM2 啟動 Express 伺服器時，出現了 `MODULE_NOT_FOUND` 的 error 。
 
