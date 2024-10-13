@@ -1,6 +1,5 @@
 ## 1. 在 Readme 中提供 instance 的 public IP，我會連線過去檢查，所以要保持主機是一直在啟動中
-- **Public IP 地址：** Public IPv4 IP address 3.107.26.19
-
+- **Public IP 地址：** Public IPv4 IP address **3.107.26.19**
 ## 2. 什麼是 instance type?
 - **Instance Type：** 在 AWS EC2 中，instance type 不同的 instance type 會有不同的 虛擬機設定與配置，像是虛擬 vCPU 的數量、記憶體大小、存儲類型和網路性能等等。通常每一種 instance type 會有自己適合的工作類型像是有些適合用於一般計算，有些適合一些 memory-intensive 的應用或是 computing-intensive 等等。
 
