@@ -9,7 +9,7 @@
   - **Web Server ：** 當 Nginx 作為 web server 時主要用來 handle HTTP request 並可以快速提供 static file（例如圖片、CSS 和 JavaScript） 。
   - **Reverse Proxy：** Ngnix 可以將 client 的 request 轉發到 其他 server（通常是內部的後端 server ），並將 response 返回給 client 端。
   - **Load Balancer：**   Ngnix 可以用各種 load balance 的方式 ( 如 round robin, least connections, IP hash 等等)來分配 request 到多個伺服器，來確保可靠性與性能。
-  - **Cache：** Nginx 可以 cache upstream web server 的 response 來降低對 後端 server 還有資料庫的 頻繁抓取以提供性能。
+  - **Cache：** Nginx 可以 cache upstream web server 的 response 來降低對 後端 server 還有資料庫的 頻繁抓取以提高性能。
 
 ## 4. pm2 套件是什麼？有什麼用處？
 - **PM2：** PM2 是一個用於 Node.js application 的 process manager ， 通常用於使 Node.js application 在 production 環境能順利運行。
