@@ -1,4 +1,4 @@
-### 1. 你的網址，應該是 https://www.xxx.xxx，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+### 1. 你的網址，應該是  https://www.xxx.xxx ，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
 
 [我的網址](https://dddd.nccumisoj.online/)
 
