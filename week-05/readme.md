@@ -1,33 +1,34 @@
+### 1. 你的網址，應該是 https://www.xxx.xxx，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+
+[我的網址](https://dddd.nccumisoj.online/)
+
+### 2. 你在哪裡購買網域的
+
+我們是在 [GoDaddy](https://www.godaddy.com/en-sg/offers/godaddy?isc=sem3year&countryview=1&currencyType=TWD&cdtl=c_17606417449.g_139428062098.k_kwd-88659201.a_684576982462.d_c.ctv_g&bnb=b&gad_source=1&gclid=Cj0KCQjwmt24BhDPARIsAJFYKk2eeWAm1KZWbCIY0E5quXRt6BSNvsgxcpLC-ZUbhyqovG8jjgm6KMgaAnIKEALw_wcB) 上面買一個我們組專案要用的 Domain ， 然後自己在創 subdomain 來練習。
+
 ### 3. DNS 的 A Record 是什麼？
 
-A Record（Address Record）是 DNS 中的一種記錄類型，它將域名（例如 `example.com`）解析為對應的 IP 位址（例如 `192.0.2.1`）。這是最常見的 DNS 記錄類型之一，當用戶在瀏覽器中輸入域名時，DNS 伺服器會查找該域名的 A 記錄，並返回對應的 IP 位址，讓瀏覽器能夠與該伺服器進行通信。
+A Record（Address Record）是 DNS 中的一種 Record Type，它將 domain（例如 `nccumisoj.online`）mapping 到對應的 IP 位址（例如 `192.0.2.1`）。當用戶在瀏覽器中輸入 Domain 時，DNS 伺服器會查找該 Domain 的 A Record，並返回對應的 IP 位址，讓瀏覽器能夠與該伺服器進互動。且 A Record 只 mapping IPv4，對於 IPv6 則要使用 AAAA Record 。
 
-- A 記錄只解析 IPv4 地址，對於 IPv6 位址則使用 AAAA 記錄。
 
 ### 4. DNS 的 NS Record 是什麼？
 
-NS Record（Name Server Record）是指定某個域名的權威 DNS 伺服器的記錄。這些伺服器負責保存該域名的所有 DNS 記錄（如 A 記錄、MX 記錄等），並回應其他伺服器對該域名的 DNS 查詢。當一個域名的 NS 記錄設置後，該域名的 DNS 查詢會被導向指定的權威 DNS 伺服器。
-
-- 一般來說，域名至少會有兩個或更多的 NS 記錄，以提供冗餘和故障轉移能力。
+NS Record（Name Server Record）是指定某個域名的中具權威性的 DNS 伺服器的 Record。這些伺服器負責保存該域名的所有 DNS Record（如 A Record、MX Record 等），並處理其他伺服器對該域名的 DNS request 。當一個域名的 NS 記錄設置後，該域名的 DNS request 會被導向那具權威性的 DNS 伺服器，且在一般 Domain 中會有不只一個 NS Record 來提供 redundancy 或 load balancing 的功能。
 
 ### 5. Domain Name vs FQDN vs URL 這三者分別為何？
 
-- **Domain Name（域名）**：是互聯網上用來標識網站的可讀性名稱，替代了難以記憶的 IP 地址。域名由多個部分組成，通常包括一個 TLD（頂級域名）和一個 SLD（次級域名），例如 `example.com`。
+- **Domain Name（域名）**：是 Internet 上用來標記網站的 Readable Name ，主要是用來代替一長串數字的 IP Address 。 域名由多個部分組成，通常包括一個 TLD 和一個 SLD 。
 
-- **FQDN（Fully Qualified Domain Name，全域名稱）**：是指完整的域名路徑，包含子域名和主域名，最終指向互聯網上唯一的一個主機。例如，`www.example.com` 是 `example.com` 的 FQDN。FQDN 通常由主機名、域名、頂級域名組成。
+- **FQDN（全域名稱）**：是指完整的域名路徑。例如，`www.example.com` 是 `example.com` 的 FQDN。FQDN 通常由 subdomain、Domain name、top-level domain 組成。
 
-- **URL（Uniform Resource Locator，統一資源定位符）**：URL 不僅包含域名，還包含協議（如 `http://` 或 `https://`）、路徑（如 `/about`）、甚至端口號和查詢參數等資訊。它是用來指定網頁或其他資源的完整地址。例如，`https://www.example.com/about` 是一個 URL。
+- **URL（Uniform Resource Locator）**：URL 不僅包含域名，還包含 Protocol（如 `http://` 或 `https://`）、路徑（如 `/about`）、甚至端口號和查詢參數等資訊。它是用來指定網頁或其他資源的完整地址。例如，`https://www.example.com/about` 是一個 URL。
 
 ### 6. 為什麼應該要為網站加上憑證？而不是直接用 HTTP 就好？
 
-為網站加上憑證的主要目的是提高安全性，具體來說，使用 SSL/TLS 憑證來加密網絡傳輸，從而轉換為 HTTPS 協議。原因包括：
+主要目的是為網站提高安全性，使用 SSL/TLS 憑證來加密網絡傳輸，從而轉換為 HTTPS 協議。主要原因如：
 
-- **數據加密**：憑證能夠加密用戶和伺服器之間的數據傳輸，防止第三方（如駭客）攔截、竊取或篡改敏感信息，例如登入憑證或信用卡資料。
+- **數據加密**：憑證能夠加密用戶和伺服器之間的數據傳輸，防止第三方攔截、竊取或篡改敏感資訊。
   
 - **身份驗證**：SSL 憑證可以證明網站的身份，確保用戶訪問的是合法的網站，而非偽造或釣魚網站。
 
-- **SEO 優勢**：Google 等搜索引擎會優先顯示使用 HTTPS 的網站，並將其列入較高的排名，這有助於提高網站的曝光率和信任度。
-
-- **信任與聲譽**：使用 HTTPS 可以向用戶展示網站是安全的，特別是當瀏覽器顯示鎖頭符號時，這有助於提高用戶對網站的信任感。
-
-- **瀏覽器支持**：現代瀏覽器越來越多地對非 HTTPS 網站顯示「不安全」的警告，這可能會嚇跑訪問者。因此，為網站加上憑證已經成為網絡世界中的基本要求。
+- **瀏覽器支持**：現代瀏覽器越來越多地對非 HTTPS 網站顯示「不安全」的警告，這可能會被使用者誤以為是非法或是不正常的網站。因此，為網站加上憑證已經成為網絡世界中的基本要求。
