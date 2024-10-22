@@ -4,7 +4,7 @@
 
 ### 2. 你在哪裡購買網域的
 
-我們是在 [GoDaddy](https://www.godaddy.com/en-sg/offers/godaddy?isc=sem3year&countryview=1&currencyType=TWD&cdtl=c_17606417449.g_139428062098.k_kwd-88659201.a_684576982462.d_c.ctv_g&bnb=b&gad_source=1&gclid=Cj0KCQjwmt24BhDPARIsAJFYKk2eeWAm1KZWbCIY0E5quXRt6BSNvsgxcpLC-ZUbhyqovG8jjgm6KMgaAnIKEALw_wcB) 上面買一個我們組專案要用的 Domain ， 然後自己在創 subdomain 來練習。
+我們是在  [GoDaddy](https://www.godaddy.com/en-sg/offers/godaddy?isc=sem3year&countryview=1&currencyType=TWD&cdtl=c_17606417449.g_139428062098.k_kwd-88659201.a_684576982462.d_c.ctv_g&bnb=b&gad_source=1&gclid=Cj0KCQjwmt24BhDPARIsAJFYKk2eeWAm1KZWbCIY0E5quXRt6BSNvsgxcpLC-ZUbhyqovG8jjgm6KMgaAnIKEALw_wcB)  上面買一個我們組專案要用的 Domain ， 然後自己在創 subdomain 來練習。
 
 ### 3. DNS 的 A Record 是什麼？
 
