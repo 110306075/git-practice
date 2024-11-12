@@ -54,11 +54,21 @@ sudo kill 576
 
 ![image](https://github.com/user-attachments/assets/6f8dc2db-8c6c-452f-aac9-07983af8744c)
 
-有組員發現要將 nginx 文件權限，改變 /var/myweb/index.html 文件的群組擁有者到 www-data
+有組員發現要將 nginx 文件權限 (原本只有 root )
 
 ![image](https://github.com/user-attachments/assets/a33cc095-4610-4a3c-adea-2a4cf0c7340c)
 
-### 重新嘗試從本地訪問，但還是有問題
+所以我們用 
+
+```shell
+sudo chown root:www-data /var/myweb/index.html
+```
+
+改變 /var/myweb/index.html 文件的群組擁有者到 www-data
+
+
+
+### 重新嘗試從 localhost 訪問，但還是有問題
 
 經過小組模索與討論後，我們認為可能是防火牆問題，我們先檢查目前的防火牆 rule
 
@@ -112,7 +122,9 @@ sudo iptables -L
 ```
 
 
+### 心得
 
+這次的除錯挑戰對我來說真的是一個挑戰，以前沒有接觸過這樣的實例體驗，所以在一開始發現問題的時候不知道該除了起手，所以有點在瞎猜，但之後隨著老師在 notion 上面的小提示，讓我們慢慢循著錯誤訊息找到 ngnix.conf 的 syntax error ，之後大家就比較繼續看 status, logs 來找可能出錯的地方，並上網找解決方法改正，但我們在 reboot 後其實卡了一段時間，一開始是 port的問題，最後才發現 reboot 後有 process 還是會被重啟，所以應該直接 disable 掉才會是比較治本的方法，最後在 防火牆 rule 卡了許久，經過組員討論與找資料後，我們才發現怎麼永久更改 rule 的方法，這過程一開始有點煩但其實很有趣，主要讓我學會有耐心地面對錯誤並從中一層層找到潛在或確切因素，而非看到 error, not work 就整個躁起來，我想這或許是我在面對錯誤需要更加強的地方
 
 
 
