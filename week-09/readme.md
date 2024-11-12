@@ -1,5 +1,5 @@
 ##  恭喜你成為一位網站工程師，現在公司有一台 EC2 instance，裡面有用 `systemd` 管理了一個 NGINX web server，但它現在似乎無法正確運作，請修復它。
-使用 AMI 建立好 EC2 instance 後，利用 ssh 連線過去
+### 使用 AMI 建立好 EC2 instance 後，利用 ssh 連線過去
 
 ```shell
 
