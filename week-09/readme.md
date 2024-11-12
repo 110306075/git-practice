@@ -34,7 +34,7 @@ sudo nano /etc/nginx/nginx.conf
 
 ```
 
-解決此問題後，我們重新看一次 nginx status
+### 解決此問題後，我們重新看一次 nginx status
 
 ![image](https://github.com/user-attachments/assets/11fcf662-bc62-4eae-a293-24089972a52a)
 
